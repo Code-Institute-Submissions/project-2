@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600|Exo:300,400,500,600');
+
+/*---------------------------------------------Colours*/
+
+.bg-color-side{
+    background-color: green;
+}
+
+.bg-color-main{
+    background-color: blue;
+}
+
+.bg-color-results{
+    background-color: red;
+}
+
+/*---------------------------------------------Global*/
+.heading{
+    font-family: "Exo", sans-serif;
+    font-weight: 400;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+
+/*---------------------------------------------Header*/
+header{
+    margin:0;
+    background-color: #141414;
+}
+
+.globe-logo{
+    background: url("../images/globe.jpg");
+    background-color: #141414;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 260px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out; /*Stops the image jumping onto the page when loading*/
+}
+
+button[type="submit"]{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: #e84610;
+    color: #fafafa;
+}
+/*---------------------------------------------Footer*/
+footer{
+    background-color: #525252;
+    color: #fafafa;
+    min-height: 50px;
+    margin:0;
+}
+.social-text{
+   color: #fafafa; 
+   font-family: "Exo", sans-serif;
+}
+.social-links{
+    padding-top: 6px;
+}
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius:  50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background-color: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+        color: #e84610;
+}
+
+/*---------------------------------------------Media Queries*/
+/*Change the logo div height on desktop*/
+@media(min-width:992px){
+   .monkees-text-logo{
+     min-height: 200px;
+}
+.column{
+    float: none;/*Allows the column to be full height*/
+    display: table-cell;
+}
+}
+
