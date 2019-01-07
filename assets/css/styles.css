@@ -3,11 +3,12 @@
 /*---------------------------------------------Colours*/
 
 .bg-color-side{
-    background-color: green;
+    background-color: #f4f4f4;
 }
 
 .bg-color-main{
-    background-color: blue;
+    background-color: #ffffff;
+    border-bottom: 30px;
 }
 
 .bg-color-results{
@@ -23,6 +24,10 @@
     text-transform: uppercase;
 }
 
+.main-content{
+   display: table; 
+}
+
 /*---------------------------------------------Header*/
 header{
     margin:0;
@@ -30,23 +35,25 @@ header{
 }
 
 .globe-logo{
-    background: url("../images/globe.jpg");
+    background: url("../images/globe.png");
     background-color: #141414;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 260px;
+    min-height: 100px;
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out; /*Stops the image jumping onto the page when loading*/
 }
 
-button[type="submit"]{
-    margin-top: 15px;
-    margin-bottom: 20px;
-    background-color: #e84610;
-    color: #fafafa;
-}
+/*---------------------------------------------Map */
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+     
+      #map {
+        height: 500px;
+      }
 /*---------------------------------------------Footer*/
 footer{
     background-color: #525252;
@@ -93,3 +100,5 @@ footer{
 }
 }
 
+
+      
