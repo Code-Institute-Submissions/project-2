@@ -50,8 +50,25 @@
         locations = new google.maps.places.PlacesService(map);    
         
         autocomplete.addListener('place_changed', changeLocation);
+        
+      document.getElementById('radio-buttons').addEventListener(
+            'change', whichSelection);
       }
       
+      function whichSelection(){
+        if(document.getElementById("attr").checked == true){
+          
+          console.log("Attractions selected");
+        }
+        if(document.getElementById("accom").checked == true){
+          
+          console.log("Accomodation selected");
+        }
+        if(document.getElementById("barAndRest").checked == true){
+          
+          console.log("Restaurant selected");
+        }
+      }
       
       function setCountry() {
         var country = document.getElementById('country').value;

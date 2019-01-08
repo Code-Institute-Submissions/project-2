@@ -51,7 +51,8 @@ select{
    height: 30px; 
    width:100%
 }
-input{
+
+#autocomplete{
     height: 30px; 
     width:100%
 }
@@ -67,6 +68,14 @@ input{
         height: 30px;
         margin: 0 auto;
         text-align:center;
+}
+#radio-buttons{
+        padding-top:30px;
+        padding-bottom:30px;
+        width: 190px;
+      
+        margin: 0 auto;
+        
 }
 /*---------------------------------------------Map */
 
