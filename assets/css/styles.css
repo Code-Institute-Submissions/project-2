@@ -76,6 +76,9 @@ input{
       #map {
         height: 500px;
       }
+      .map-content{
+          border-bottom:20px;
+      }
 /*---------------------------------------------Footer*/
 footer{
     background-color: #525252;
@@ -119,6 +122,9 @@ footer{
 .column{
     float: none;/*Allows the column to be full height*/
     display: table-cell;
+}
+.main-content{
+   height:600px;
 }
 }
 
