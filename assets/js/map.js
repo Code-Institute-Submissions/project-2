@@ -3,6 +3,10 @@
 //Global declarations
       var map;
       var autocomplete;
+      var locations;
+      var markers = [];
+      var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
+      
       var countryRestriction = {'country': []};
       
       var countries = {
@@ -42,7 +46,9 @@
               types: ['(cities)'],
               componentRestrictions: countryRestriction
             });
-            
+        
+        locations = new google.maps.places.PlacesService(map);    
+        
         autocomplete.addListener('place_changed', changeLocation);
       }
       
@@ -65,7 +71,58 @@
         if (place.geometry) {
           map.panTo(place.geometry.location);
           map.setZoom(15);
+          find();
         } else {
           document.getElementById('autocomplete').placeholder = 'Enter a city';
         }
       }
+      
+      function find() {
+        var search = {
+          bounds: map.getBounds(),
+          types: ['lodging']
+        };
+
+        locations.nearbySearch(search, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            
+            clearMarkers();
+            
+            for (var i = 0; i < results.length; i++) {
+              
+              var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
+              var markerIcon = MARKER_PATH + markerLetter + '.png';
+              
+              // Use marker animation to drop the icons incrementally on the map.
+             
+              markers[i] = new google.maps.Marker({
+                position: results[i].geometry.location,
+                animation: google.maps.Animation.DROP,
+                icon: markerIcon
+              });
+             
+              markers[i].placeResult = results[i];
+              
+              setTimeout(dropMarker(i), i * 100);
+            }
+          }
+        });
+      }
+
+      function clearMarkers() {
+        for (var i = 0; i < markers.length; i++) {
+          if (markers[i]) {
+            markers[i].setMap(null);
+          }
+        }
+        markers = [];
+      }
+      
+      function dropMarker(i) {
+        return function() {
+          markers[i].setMap(map);
+        };
+      }
+
+
+      
