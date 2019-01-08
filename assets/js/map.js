@@ -2,6 +2,8 @@
 
 //Global declarations
       var map;
+      var autocomplete;
+      var countryRestriction = {'country': []};
       
       var countries = {
         'irl': {
@@ -28,6 +30,13 @@
           streetViewControl: false
         });
         
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */ (
+                document.getElementById('autocomplete')), {
+              types: ['(cities)'],
+              componentRestrictions: countryRestriction
+            });
+        
         // Add a DOM event listener to react when the user selects a country.
         document.getElementById('country').addEventListener(
             'change', setCountry);
@@ -39,8 +48,10 @@
         if (country == 'all') {
           map.setCenter({lat: 15, lng: 0});
           map.setZoom(2);
+          autocomplete.setComponentRestrictions({'country': []});
         } else {
           map.setCenter(countries[country].center);
           map.setZoom(countries[country].zoom);
+          autocomplete.setComponentRestrictions({'country': country});
         }
       }
