@@ -26,20 +26,24 @@
           center: {lat: 15, lng: 0},
           mapTypeControl: false,
           panControl: false,
-          zoomControl: false,
+          zoomControl: true,
           streetViewControl: false
         });
         
+        
+        
+        // Add a DOM event listener to react when the user selects a country.
+        document.getElementById('country').addEventListener(
+            'change', setCountry);
+            
         autocomplete = new google.maps.places.Autocomplete(
             /** @type {!HTMLInputElement} */ (
                 document.getElementById('autocomplete')), {
               types: ['(cities)'],
               componentRestrictions: countryRestriction
             });
-        
-        // Add a DOM event listener to react when the user selects a country.
-        document.getElementById('country').addEventListener(
-            'change', setCountry);
+            
+        autocomplete.addListener('place_changed', changeLocation);
       }
       
       
@@ -53,5 +57,15 @@
           map.setCenter(countries[country].center);
           map.setZoom(countries[country].zoom);
           autocomplete.setComponentRestrictions({'country': country});
+        }
+      }
+      
+      function changeLocation() {
+        var place = autocomplete.getPlace();
+        if (place.geometry) {
+          map.panTo(place.geometry.location);
+          map.setZoom(15);
+        } else {
+          document.getElementById('autocomplete').placeholder = 'Enter a city';
         }
       }
