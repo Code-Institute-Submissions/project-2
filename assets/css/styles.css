@@ -31,12 +31,12 @@
 /*---------------------------------------------Header*/
 header{
     margin:0;
-    background-color: #141414;
+    background-color: #525252;
 }
 
 .globe-logo{
     background: url("../images/globe.png");
-    background-color: #141414;
+    background-color: #525252;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
