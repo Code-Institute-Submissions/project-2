@@ -56,20 +56,19 @@
       }
       
       function whichSelection(){
+        if(autocomplete.getPlace() != null){
         if(document.getElementById("attr").checked == true){
-          
-          console.log("Attractions selected");
+          find(['museum','art_gallery','park','church']);
+         
         }
         if(document.getElementById("accom").checked == true){
-          
-          console.log("Accomodation selected");
+          find(['lodging']);
         }
         if(document.getElementById("barAndRest").checked == true){
-          
-          console.log("Restaurant selected");
+          find(['restaurant']);
         }
       }
-      
+      }
       function setCountry() {
         var country = document.getElementById('country').value;
         if (country == 'all') {
@@ -88,16 +87,15 @@
         if (place.geometry) {
           map.panTo(place.geometry.location);
           map.setZoom(15);
-          find();
         } else {
           document.getElementById('autocomplete').placeholder = 'Enter a city';
         }
       }
       
-      function find() {
+      function find(selected) {
         var search = {
           bounds: map.getBounds(),
-          types: ['lodging']
+          types: selected
         };
 
         locations.nearbySearch(search, function(results, status) {
