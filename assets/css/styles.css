@@ -31,12 +31,12 @@
 /*---------------------------------------------Header*/
 header{
     margin:0;
-    background-color: #525252;
+    background-color: #aadaff;
 }
 
 .globe-logo{
     background: url("../images/globe.png");
-    background-color: #525252;
+    background-color: #aadaff;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -98,7 +98,7 @@ table{
 }
 /*---------------------------------------------Footer*/
 footer{
-    background-color: #525252;
+    background-color: #aadaff;
     color: #fafafa;
     min-height: 50px;
     margin:0;
