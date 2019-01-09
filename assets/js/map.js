@@ -102,6 +102,7 @@
           if (status === google.maps.places.PlacesServiceStatus.OK) {
             
             clearMarkers();
+            clearResults();
             
             for (var i = 0; i < results.length; i++) {
               
@@ -119,6 +120,8 @@
               markers[i].placeResult = results[i];
               
               setTimeout(dropMarker(i), i * 100);
+              
+              addResult(results[i], i);
             }
           }
         });
@@ -139,5 +142,33 @@
         };
       }
 
+function addResult(result, i) {
+        var results = document.getElementById('results');
+        var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
+        var markerIcon = MARKER_PATH + markerLetter + '.png';
+
+        var tr = document.createElement('tr');
+        tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
+
+        var iconTd = document.createElement('td');
+        var nameTd = document.createElement('td');
+        var icon = document.createElement('img');
+        icon.src = markerIcon;
+        icon.setAttribute('class', 'placeIcon');
+        icon.setAttribute('className', 'placeIcon');
+        var name = document.createTextNode(result.name);
+        iconTd.appendChild(icon);
+        nameTd.appendChild(name);
+        tr.appendChild(iconTd);
+        tr.appendChild(nameTd);
+        results.appendChild(tr);
+      }
+
+      function clearResults() {
+        var results = document.getElementById('results');
+        while (results.childNodes[0]) {
+          results.removeChild(results.childNodes[0]);
+        }
+      }
 
       

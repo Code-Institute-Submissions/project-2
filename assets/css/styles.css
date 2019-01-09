@@ -12,7 +12,7 @@
 }
 
 .bg-color-results{
-    background-color: red;
+    background-color: #ffffff;
 }
 
 /*---------------------------------------------Global*/
@@ -76,6 +76,11 @@ select{
         margin: 0 auto;
         
 }
+button[type="submit"]{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 190px;
+}
 /*---------------------------------------------Map */
 
 /* Always set the map height explicitly to define the size of the div
@@ -87,6 +92,10 @@ select{
       .map-content{
           border-bottom:20px;
       }
+/*---------------------------------------------Results*/
+table{
+    width: 100%;
+}
 /*---------------------------------------------Footer*/
 footer{
     background-color: #525252;
@@ -132,7 +141,7 @@ footer{
     display: table-cell;
 }
 .main-content{
-   height:600px;
+   /*height:600px;*/
 }
 }
 
