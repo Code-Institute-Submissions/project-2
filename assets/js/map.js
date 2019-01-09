@@ -53,6 +53,19 @@
         
       document.getElementById('radio-buttons').addEventListener(
             'change', whichSelection);
+            
+            document.getElementById('clear-button').addEventListener(
+            'click', clear);
+      }
+      
+      function clear(){
+        clearResults();
+        clearMarkers();
+       
+        map.setCenter({lat: 15, lng: 0});
+        map.setZoom(2);
+        autocomplete.setComponentRestrictions({'country': []});
+        console.log( document.getElementById('autocomplete').getAttribute('value'));
       }
       
       function whichSelection(){
