@@ -61,15 +61,18 @@
       function clear(){
         clearResults();
         clearMarkers();
-       
+        document.getElementById('autocomplete').value = '';
+        document.getElementById('country').selectedIndex = 0;
+        document.getElementById("attr").checked = false;
+        document.getElementById("accom").checked = false;
+        document.getElementById("barAndRest").checked = false;
         map.setCenter({lat: 15, lng: 0});
         map.setZoom(2);
         autocomplete.setComponentRestrictions({'country': []});
-        console.log( document.getElementById('autocomplete').getAttribute('value'));
       }
       
       function whichSelection(){
-        if(autocomplete.getPlace() != null){
+        if(autocomplete.getPlace() != null && document.getElementById('autocomplete').value != ''){
         if(document.getElementById("attr").checked == true){
           find(['museum','art_gallery','park','church']);
          
@@ -110,12 +113,13 @@
           bounds: map.getBounds(),
           types: selected
         };
-
+            clearResults();
+            clearMarkers();
+            
         locations.nearbySearch(search, function(results, status) {
           if (status === google.maps.places.PlacesServiceStatus.OK) {
             
-            clearMarkers();
-            clearResults();
+            
             
             for (var i = 0; i < results.length; i++) {
               
