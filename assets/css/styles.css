@@ -46,7 +46,13 @@ header{
     -webkit-transition: all .5s ease-in-out; /*Stops the image jumping onto the page when loading*/
 }
 
+.header-text{
+    text-align:center;
+}
 /*---------------------------------------------Selection Column*/
+.selection-header{
+    text-align:center;
+}
 select{
    height: 30px; 
    width:100%
@@ -91,10 +97,14 @@ button[type="submit"]{
       }
       .map-content{
           border-bottom:20px;
+          text-align:center;
       }
 /*---------------------------------------------Results*/
 table{
     width: 100%;
+}
+.results-header{
+    text-align: center;
 }
 /*---------------------------------------------Footer*/
 footer{
@@ -133,15 +143,25 @@ footer{
 /*---------------------------------------------Media Queries*/
 /*Change the logo div height on desktop*/
 @media(min-width:992px){
-   .monkees-text-logo{
-     min-height: 200px;
-}
 .column{
     float: none;/*Allows the column to be full height*/
     display: table-cell;
 }
+.header-text{
+    text-align:left;
+}
+.selection-header{
+    text-align:left;
+}
 .main-content{
    /*height:600px;*/
+}
+.map-content{
+          border-bottom:20px;
+          text-align:left;
+      }
+.results-header{
+    text-align: left;
 }
 }
 
