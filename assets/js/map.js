@@ -9,21 +9,6 @@
       var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
       var hostnameRegexp = new RegExp('^https?://.+?/');
       var countryRestriction = {'country': []};
-      
-      var countries = {
-        'irl': {
-          center: {lat: 53.1,lng: -7.6},
-          zoom: 5
-        },
-        'us': {
-          center: {lat: 37.1, lng: -95.7},
-          zoom: 3
-        },
-        'uk': {
-          center: {lat: 54.8, lng: -4.6},
-          zoom: 5
-        }
-      };
 
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -58,6 +43,8 @@
             document.getElementById('clear-button').addEventListener(
             'click', clear);
             
+            populateCountries();
+            
             infoWindow = new google.maps.InfoWindow({
           content: document.getElementById('info-content')
         });
@@ -77,28 +64,37 @@
       }
       
       function whichSelection(){
-        if(autocomplete.getPlace() != null && document.getElementById('autocomplete').value != ''){
-        if(document.getElementById("attr").checked == true){
-          find(['museum','art_gallery','park','church']);
-         
-        }
-        if(document.getElementById("accom").checked == true){
-          find(['lodging']);
-        }
-        if(document.getElementById("barAndRest").checked == true){
-          find(['restaurant']);
-        }
+        if(autocomplete.getPlace() != null && document.getElementById('autocomplete').value != '')
+        {
+            if(document.getElementById("attr").checked == true){
+              find(['museum','art_gallery','park','church']);
+            }
+            if(document.getElementById("accom").checked == true){
+            find(['lodging']);
+           }
+            if(document.getElementById("barAndRest").checked == true){
+             find(['restaurant']);
+           }
+          }
+        else
+        {
+          
+            document.getElementById("attr").checked = false;
+            document.getElementById("accom").checked = false;
+            document.getElementById("barAndRest").checked = false;}
+          
       }
-      }
+      
       function setCountry() {
-        var country = document.getElementById('country').value;
+        var countryAndCoords = document.getElementById('country').value.split(',');
+        var country = countryAndCoords[0];
         if (country == 'all') {
           map.setCenter({lat: 15, lng: 0});
           map.setZoom(2);
           autocomplete.setComponentRestrictions({'country': []});
         } else {
-          map.setCenter(countries[country].center);
-          map.setZoom(countries[country].zoom);
+          map.setCenter({lat: parseFloat(countryAndCoords[1]), lng: parseFloat(countryAndCoords[2])});
+          map.setZoom(5);
           autocomplete.setComponentRestrictions({'country': country});
         }
       }
@@ -203,6 +199,30 @@ tr.onclick = function() {
         while (results.childNodes[0]) {
           results.removeChild(results.childNodes[0]);
         }
+      }
+      
+      function populateCountries() {
+        
+        var countriesTag = document.getElementById('country');
+         $(document).ready(function() {
+    //fetch text file
+    $.get('countries.data', function(data) {
+        //split on new lines
+        var lines = data.split('\n');
+        
+        for(var i=0;i<lines.length;i++) {
+            // use lines[i] the way you want
+            var values = lines[i].split(',');
+            var coords = values[0] + ',' + values[1] + ',' + values[2];
+            var optionTag = document.createElement('option');
+            var countryName = document.createTextNode(values[3]);
+            optionTag.setAttribute('value',coords)
+            optionTag.appendChild(countryName);
+            countriesTag.appendChild(optionTag);
+            console.log(values[3]);
+        }
+    });
+});
       }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
