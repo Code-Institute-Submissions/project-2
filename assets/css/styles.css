@@ -103,8 +103,9 @@ button[type="submit"]{
 table{
     width: 100%;
 }
-.results-header{
+#results-header{
     text-align: center;
+    display:none;
 }
 /*---------------------------------------------Footer*/
 footer{
@@ -112,6 +113,7 @@ footer{
     color: #fafafa;
     min-height: 50px;
     margin:0;
+    border-top: 5px solid  #f4f4f4;
 }
 .social-text{
    color: #fafafa; 
@@ -160,7 +162,7 @@ footer{
           border-bottom:20px;
           text-align:left;
       }
-.results-header{
+#results-header{
     text-align: left;
 }
 }
