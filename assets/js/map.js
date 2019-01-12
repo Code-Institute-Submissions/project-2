@@ -219,7 +219,6 @@ tr.onclick = function() {
             optionTag.setAttribute('value',coords)
             optionTag.appendChild(countryName);
             countriesTag.appendChild(optionTag);
-            console.log(values[3]);
         }
     });
 });
