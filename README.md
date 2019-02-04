@@ -28,34 +28,41 @@ User Stories
 
 WireFrame diagrams
 - [Desktop wireframe](https://michaelhdev.github.io/project-2/wireframe-diagrams/desktop-wireframe.JPG)
-- [Tablet wireframe](https://michaelhdev.github.io/project-2/wireframe-diagrams/tablet-wireframe.JPG)
-- [Phone wireframe](https://michaelhdev.github.io/project-2/wireframe-diagrams/phone-wireframe.JPG)
+- [Tablet wireframe](https://michaelhdev.github.io/project-2/wireframe-diagrams/phone-tablet-wireframe.JPG)
+- [Phone wireframe](https://michaelhdev.github.io/project-2/wireframe-diagrams/phone-tablet-wireframe.JPG)
 
 ## Features
 
 Features
-- Country selection feature: A user wants to find the location of a country on a map. => A user selects and country in the world from the country selection box => The map zooms to that location.
-- City selection feature:  A user wants to find the location of a city on a map. => A user types any city in the world directle in to the city text box => The city section auto completes and zooms to that location on the map.
-
-
-
-### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- Country selection feature: A user wants to find the location of a country on a map. => A user selects and country in the world from the country drop down box => The map zooms to that location.
+- City selection feature:  A user wants to find the location of a city on a map. => A user types any city in the world directly into the city text box => The city text auto completes and zooms to that location on the map.
+- Cities in a country feature: A user wants to find a city in a specific country. => A user selects a country from the country drop down box => The user can now only enter cities from that country in the city text box => The city text auto completes and zooms to that city on the map.
+- Locate tourist attractions on a city map feature: A user wants to find tourist attractions in a selected city. => A user enters a city and selects the attractions radio button => The attractions in that city are shown on a map and more information about each attraction is show in a results table underneath the map.
+- Locate accommodation on a city map feature: A user wants to find accommodation in a selected city. => A user enters a city and selects the accommodation radio button => The accommodation in that city are shown on a map and more information about each accommodation is show in a results table underneath the map.
+- Locate bars and restaurants on a city map feature: A user wants to find bars and restaurants in a selected city. => A user enters a city and selects the bars and restaurants radio button => The bars and restaurants in that city are shown on a map and more information about each bar and restaurant is show in a results table underneath the map.
+- Show information about selected point of interest feature: A user wants to find out more on a point of interest returned in the search results => A user selects the icon on the map or the name in the results table => More information about the selected item is displayed on the map.
+- Clear all results feature: A user want to clear all the results and start a new search => The user clicks on the "clear results" button => The maps, results table and all the texts fields are returned to their initial state.
 
 ### Features Left to Implement
-- Another feature idea
+- In the future the application may be updated to include the option to select additional points of interest.
 
 ## Technologies Used
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
+- [Bootstrap](https://getbootstrap.com/docs/3.3/getting-started/)
+    - This project uses **Bootstrap** to make the site responsive for different screen sizes.
+- [Font Awesome](https://fontawesome.com/)
+    - This project uses **Font Awesome** to display social media icons on the site.
 - [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+    - The project uses **JQuery** to read in a data file
+- [Google APIs](https://jquery.com)
+    - The project uses **Google Maps API and Google Places API** to render maps, search result and autocomplete.
+
+- HTML 5
+- CSS
+- Javascript 
+
 
 
 ## Testing
