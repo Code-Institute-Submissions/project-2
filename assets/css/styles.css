@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600|Exo:300,400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400|Exo:400');
 
 /*---------------------------------------------Colours*/
 
@@ -24,10 +24,6 @@
     text-transform: uppercase;
 }
 
-.main-content{
-   
-}
-
 /*---------------------------------------------Header*/
 header{
     margin:0;
@@ -45,10 +41,10 @@ header{
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out; /*Stops the image jumping onto the page when loading*/
 }
-
 .header-text{
     text-align:center;
 }
+
 /*---------------------------------------------Selection Column*/
 .selection-header{
     text-align:center;
@@ -89,8 +85,7 @@ button[type="submit"]{
 }
 /*---------------------------------------------Map */
 
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+/* Always set the map height explicitly to define the size of the div element that contains the map. */
      
       #map {
         height: 500px;
@@ -99,7 +94,7 @@ button[type="submit"]{
           border-bottom:20px;
           text-align:center;
       }
-/*---------------------------------------------Results*/
+/*---------------------------------------------Results Table*/
 table{
     width: 100%;
 }
@@ -143,7 +138,8 @@ footer{
 }
 
 /*---------------------------------------------Media Queries*/
-/*Change the logo div height on desktop*/
+
+/*Change the logo div height and text alignment on desktop*/
 @media(min-width:992px){
 .column{
     float: none;/*Allows the column to be full height*/
@@ -155,9 +151,7 @@ footer{
 .selection-header{
     text-align:left;
 }
-.main-content{
-   /*height:600px;*/
-}
+
 .map-content{
           border-bottom:20px;
           text-align:left;
