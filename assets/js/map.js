@@ -265,6 +265,8 @@ function showInfoWindow() {
 }
 
 // Load the place information into the HTML elements used by the info window.
+// Taken from google places api documentation
+
 function buildIWContent(place) {
   document.getElementById('iw-icon').innerHTML = '<img class="hotelIcon" ' +
     'src="' + place.icon + '"/>';

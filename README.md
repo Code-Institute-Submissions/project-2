@@ -1,4 +1,6 @@
-# Project 2 - Destination Interest Finder
+# Project 2 - Destination Interest Finder 
+
+[Open Website](https://michaelhdev.github.io/project-2)
 
 The Destination Interest Finder website calls upon the Google Maps API and the Google Places API to allow users do reseach for their next travel destination. 
 
