@@ -1,6 +1,6 @@
 // Custom Map File - inspiration for some functions taken from google api documentation.
 // This file populates countries data, allows a user select a country and uses the google places api to autocomplete the city
-// Searches for Attractions depending the country, city, attraction selected
+// Searches for Attractions depending the country, city and category selected
 // Displays Attractions on a map depending on search results
 // Displays information on each Attraction when selected
 
@@ -230,7 +230,7 @@ function populateCountriesSelectionBox() {
   var countriesTag = document.getElementById('country');
   $(document).ready(function() {
     //fetch text file
-    $.get('countries.data', function(data) {
+    $.get('assets/data/countries.data', function(data) {
       //split on new lines
       var lines = data.split('\n');
 
