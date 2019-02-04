@@ -2,35 +2,38 @@
 
 /*---------------------------------------------Colours*/
 
-.bg-color-side{
+.bg-color-side {
     background-color: #f4f4f4;
 }
 
-.bg-color-main{
+.bg-color-main {
     background-color: #ffffff;
     border-bottom: 30px;
 }
 
-.bg-color-results{
+.bg-color-results {
     background-color: #ffffff;
 }
 
 /*---------------------------------------------Global*/
-.heading{
+
+.heading {
     font-family: "Exo", sans-serif;
     font-weight: 400;
 }
-.uppercase{
+
+.uppercase {
     text-transform: uppercase;
 }
 
 /*---------------------------------------------Header*/
-header{
-    margin:0;
+
+header {
+    margin: 0;
     background-color: #aadaff;
 }
 
-.globe-logo{
+.globe-logo {
     background: url("../images/globe.png");
     background-color: #aadaff;
     background-position: top;
@@ -39,89 +42,104 @@ header{
     min-height: 100px;
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out; /*Stops the image jumping onto the page when loading*/
+    -webkit-transition: all .5s ease-in-out;
+    /*Stops the image jumping onto the page when loading*/
 }
-.header-text{
-    text-align:center;
+
+.header-text {
+    text-align: center;
 }
 
 /*---------------------------------------------Selection Column*/
-.selection-header{
-    text-align:center;
-}
-select{
-   height: 30px; 
-   width:100%
+
+.selection-header {
+    text-align: center;
 }
 
-#autocomplete{
-    height: 30px; 
-    width:100%
-}
-#countrySelectionBox{
-        width: 190px;
-        height: 70px;
-        margin: 0 auto;
-        text-align:center;
+select {
+    height: 30px;
+    width: 100%
 }
 
-#cityTextBox{
+#autocomplete {
+    height: 30px;
+    width: 100%
+}
+
+#countrySelectionBox {
     width: 190px;
-        height: 30px;
-        margin: 0 auto;
-        text-align:center;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
 }
-#radio-buttons{
-        padding-top:30px;
-        padding-bottom:30px;
-        width: 190px;
-        margin: 0 auto;
-        
+
+#cityTextBox {
+    width: 190px;
+    height: 30px;
+    margin: 0 auto;
+    text-align: center;
 }
-button[type="submit"]{
+
+#radio-buttons {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 190px;
+    margin: 0 auto;
+
+}
+
+button[type="submit"] {
     margin-top: 15px;
     margin-bottom: 20px;
     width: 190px;
 }
+
 /*---------------------------------------------Map */
 
-/* Always set the map height explicitly to define the size of the div element that contains the map. */
-     
-      #map {
-        height: 500px;
-      }
-      .map-content{
-          border-bottom:20px;
-          text-align:center;
-      }
+#map {
+    height: 500px;
+}
+
+.map-content {
+    border-bottom: 20px;
+    text-align: center;
+}
+
 /*---------------------------------------------Results Table*/
-table{
+
+table {
     width: 100%;
 }
-#results-header{
+
+#results-header {
     text-align: center;
-    display:none;
+    display: none;
 }
+
 /*---------------------------------------------Footer*/
-footer{
+
+footer {
     background-color: #aadaff;
     color: #fafafa;
     min-height: 50px;
-    margin:0;
-    border-top: 5px solid  #f4f4f4;
+    margin: 0;
+    border-top: 5px solid #f4f4f4;
 }
-.social-text{
-   color: #fafafa; 
-   font-family: "Exo", sans-serif;
+
+.social-text {
+    color: #000000;
+    font-family: "Exo", sans-serif;
 }
-.social-links{
+
+.social-links {
     padding-top: 6px;
 }
+
 .social-links li a i {
     width: 32px;
     height: 32px;
     padding: 12px 0;
-    border-radius:  50%;
+    border-radius: 50%;
     font-size: 13px;
     line-height: 7px;
     text-align: center;
@@ -134,32 +152,31 @@ footer{
 }
 
 .social-links li a i:hover {
-        color: #e84610;
+    color: #e84610;
 }
 
 /*---------------------------------------------Media Queries*/
 
 /*Change the logo div height and text alignment on desktop*/
-@media(min-width:992px){
-.column{
-    float: none;/*Allows the column to be full height*/
-    display: table-cell;
-}
-.header-text{
-    text-align:left;
-}
-.selection-header{
-    text-align:left;
-}
 
-.map-content{
-          border-bottom:20px;
-          text-align:left;
-      }
-#results-header{
-    text-align: left;
-}
-}
+@media(min-width:992px) {
+    .column {
+        float: none;
+        /*Allows the column to be full height*/
+        display: table-cell;
+    }
+    .header-text {
+        text-align: left;
+    }
+    .selection-header {
+        text-align: left;
+    }
 
-
-      
+    .map-content {
+        border-bottom: 20px;
+        text-align: left;
+    }
+    #results-header {
+        text-align: left;
+    }
+}

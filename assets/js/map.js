@@ -1,8 +1,11 @@
-// Custom Map File - inspiration for some functions taken from google api documentation.
-// This file populates countries data, allows a user select a country and uses the google places api to autocomplete the city
-// Searches for Attractions depending the country, city and category selected
-// Displays Attractions on a map depending on search results
-// Displays information on each Attraction when selected
+// Map.js- inspiration for some functions taken from google api documentation.
+// This file provide the functionaity for a city interest finder website.
+// It populates the countries drop down box on the website from a data file.
+// It Allows a user select a country and uses the google places api to autocomplete the city.
+// It displays the search location on a map
+// It allows users to search for points of interest depending on the country, city and category selected using the google places api.
+// It displays points of interest on a map depending on the search results.
+// It displays information on each point of interest when selected by the user.
 
 
 

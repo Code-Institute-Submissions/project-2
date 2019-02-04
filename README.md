@@ -153,6 +153,11 @@ During testing
 ## Deployment
 
 This project is deployed using github pages. 
+GitHub Pages is designed to host project pages from a GitHub repository.
+Under the settings section of this projects [Github repository](https://github.com/michaelhdev/project-2)
+I set github pages to deploy the website off the main branch. The live website is linked below.
+
+
 - [Website](https://michaelhdev.github.io/project-2)
 
 

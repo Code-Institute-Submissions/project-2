@@ -14,12 +14,13 @@
 
 
 <body>
+  <!-- Header Area -->
   <header class="container-fluid">
     <div class="row">
       <div class="col-md-4 globe-logo"></div>
       <div class="col-md-8 header-text">
 
-        <h1 class="uppercase headingColour heading">Find your place of interest</h1>
+        <h1 class="uppercase heading">Find your place of interest</h1>
 
       </div>
     </div>
@@ -28,31 +29,33 @@
   <section class="container-fluid">
     <div class="row main-content">
 
+      <!-- Selection area: country selection box, city text box, interests radio buttons and clear button -->
       <div class="col-xs-12 col-sm-12 col-md-4 bg-color-side column ">
         <div class="selection-header">
           <h3 class="heading uppercase">Where would you like to go?</h3>
         </div>
         <div id="countrySelectionBox">
+          <!-- The country selection box is populated by /assets/js/map.js -->
           <select id="country">
             <option value="all" selected>All</option>
           </select>
         </div>
-        
+
         <div id="cityTextBox">
           <input id="autocomplete" value="" placeholder="Enter a city" type="text" />
         </div>
-    
-      <div id="radio-buttons">
-      <input type="radio" name="selection" id="attr" value="attr"> Attractions<br>
-      <input type="radio" name="selection" id="accom" value="accom"> Accomodation<br>
-      <input type="radio" name="selection" id="barAndRest" value="rest"> Bars and Restaurants  
-      </div>
-      <div id="clearButtom">
-        <button type="submit" id="clear-button" class="btn btn-secondary center-block">Clear</button>
-      </div>
+
+        <div id="radio-buttons">
+          <input type="radio" name="selection" id="attr" value="attr"> Attractions<br>
+          <input type="radio" name="selection" id="accom" value="accom"> Accomodation<br>
+          <input type="radio" name="selection" id="barAndRest" value="rest"> Bars and Restaurants
+        </div>
+        <div id="clearButtom">
+          <button type="submit" id="clear-button" class="btn btn-secondary center-block">Clear</button>
+        </div>
       </div>
 
-
+      <!-- Map Area -->
       <div class="col-xs-12 col-sm-12 col-md-8 bg-color-main column">
         <div class="map-content">
           <h3 id="map-text" class="heading uppercase">Map</h3>
@@ -60,17 +63,21 @@
         </div>
       </div>
     </div>
-     <div class="row">
-          <div class="bg-color-results">
-                <div id="results-header">
-                  <h3 class="heading uppercase">Results</h3>
-                </div> 
-                <table id="resultsTable">
-                  <tbody id="results"></tbody>
-                </table> 
-            </div>
-      </div> 
-      <div style="display: none">
+
+    <!-- The results table is populated by /assets/js/map.js -->
+    <div class="row">
+      <div class="bg-color-results">
+        <div id="results-header">
+          <h3 class="heading uppercase">Results</h3>
+        </div>
+        <table id="resultsTable">
+          <tbody id="results"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- The information window is populated by /assets/js/map.js -->
+    <div style="display: none">
       <div id="info-content">
         <table>
           <tr id="iw-url-row" class="iw_table_row">
@@ -98,6 +105,7 @@
     </div>
   </section>
 
+  <!-- Footer area -->
   <footer class="container-fluid">
     <div class="row">
       <div class="col-sm-4 col-sm-offset-8">
@@ -114,9 +122,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- External script declaration area -->
   <script src="assets/js/map.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZPg8gD4YmQSz_Uq4h45SiZU9o9TKT3OE&libraries=places&callback=initMap" async defer></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  
+
 </body>
+
 </html>
