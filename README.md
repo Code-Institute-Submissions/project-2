@@ -67,44 +67,98 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+Use Cases: A user wants to find the location of a country on a map.
+- Page opens - The country, city and radio buttons are blank. The map is zoomed out to view the world.
+- The User selects a country from all the countries in the world from the country drop down menu.
+- The map zooms to that country.
+- On a desktop: the logo and header text are displayed side by side -> The selection area and map are displayed underneath side by side.
+- On a phone/tablet: the logo and header text are displayed underneath each other -> The selection area and map are displayed underneath each other.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+Use Cases: - A user wants to find the location of a city on a map.
+- Page opens - The country, city and radio buttons are blank. The map is zoomed out to view the world.
+- The User leaves the country drop down box set to all and start to type a city, the city name auto completes and the user selects the city.
+- The map zooms to that city.
+- On a desktop: the logo and header text are displayed side by side -> The selection area and map are displayed underneath side by side.
+- On a phone/tablet: the logo and header text are displayed underneath each other -> The selection area and map are displayed underneath each other.
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+Use Cases: - A user wants to find cities in a specific country.
+- Page opens - The country, city and radio buttons are blank. The map is zoomed out to view the world.
+- The User selects a country from the drop down box. When the user types in the "Enter a city" box, only cities from that country will be displayed with auto complete.
+- The User selects a city from that country.
+- The map zooms to that city.
+- On a desktop: the logo and header text are displayed side by side -> The selection area and map are displayed underneath side by side.
+- On a phone/tablet: the logo and header text are displayed underneath each other -> The selection area and map are displayed underneath each other.
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+Use Cases: - A user wants to find the location of tourist attractions in a selected city.
+- Page opens - The country, city and radio buttons are blank. The map is zoomed out to view the world.
+- The User selects a country from the drop down box. When the user types in the "Enter a city" box, only cities from that country will be displayed with auto complete.
+- The User selects a city from that country.
+- The map zooms to that city.
+- The user selects the "Attractions" radio button.
+- Attraction markers are dropped onto the map, starting at A and continuing depending on how much attractions there are.
+- A results table is displayed underneath the map displaying the letter of the marker on the map and the name of the attraction.
+- On a desktop: the logo and header text are displayed side by side -> The selection area and map are displayed underneath side by side. -> The results table is displayed underneat the map
+- On a phone/tablet: the logo and header text are displayed underneath each other -> The selection area and map are displayed underneath each other -> The results table is displayed underneat the map
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+Use Cases: - A user wants to find the location of accommodation in a selected city.
+- Page opens - The country, city and radio buttons are blank. The map is zoomed out to view the world.
+- The User selects a country from the drop down box. When the user types in the "Enter a city" box, only cities from that country will be displayed with auto complete.
+- The User selects a city from that country.
+- The map zooms to that city.
+- The user selects the "Accomodation" radio button.
+- Accomodation markers are dropped onto the map, starting at A and continuing depending on how much Accomodation there is.
+- A results table is displayed underneath the map displaying the letter of the marker on the map and the name of the Accomodation.
+- On a desktop: the logo and header text are displayed side by side -> The selection area and map are displayed underneath side by side. -> The results table is displayed underneat the map
+- On a phone/tablet: the logo and header text are displayed underneath each other -> The selection area and map are displayed underneath each other -> The results table is displayed underneat the map
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+Use Cases: - A user wants to find the location of Bars and restaurants in a selected city.
+- Page opens - The country, city and radio buttons are blank. The map is zoomed out to view the world.
+- The User selects a country from the drop down box. When the user types in the "Enter a city" box, only cities from that country will be displayed with auto complete.
+- The User selects a city from that country.
+- The map zooms to that city.
+- The user selects the "Bars and restaurants" radio button.
+- Bars and restaurants markers are dropped onto the map, starting at A and continuing depending on how much Bars and restaurants there are.
+- A results table is displayed underneath the map displaying the letter of the marker on the map and the name of the Bar or restaurant.
+- On a desktop: the logo and header text are displayed side by side -> The selection area and map are displayed underneath side by side. -> The results table is displayed underneat the map
+- On a phone/tablet: the logo and header text are displayed underneath each other -> The selection area and map are displayed underneath each other -> The results table is displayed underneat the map
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+Use Cases: - A user wants to find out information on the point of interest once the have selected it.
+- Page opens - The country, city and radio buttons are blank. The map is zoomed out to view the world.
+- The User selects a country from the drop down box. When the user types in the "Enter a city" box, only cities from that country will be displayed with auto complete.
+- The User selects a city from that country.
+- The map zooms to that city.
+- The user selects a radio button.
+- Markers are dropped onto the map, starting at A and continuing depending on how many point of interest there are.
+- A results table is displayed underneath the map displaying the letter of the marker on the map and the name of the Point of interest.
+- User either selects the point of interest marker on the map or point of interest from the results table.
+- Information about that point of interest is displayed beside the marker on the map. The information contains Name, address, Telephone, Rating, Website.
+- On a desktop: the logo and header text are displayed side by side -> The selection area and map are displayed underneath side by side. -> The results table is displayed underneat the map
+- On a phone/tablet: the logo and header text are displayed underneath each other -> The selection area and map are displayed underneath each other -> The results table is displayed underneat the map
+
+Use Cases: - A user wants to clear all information and start a new search.
+- The user selects a country -> clicks the "Clear" button, the page resets.
+- The user leaves the county at "all" and types a city -> clicks the "Clear" button, the page resets.
+- The user leaves selects a country and types a city -> clicks the "Clear" button, the page resets.
+- The user leaves selects a country and types a city, selects the "Attractions" radio button -> clicks the "Clear" button, the page resets.
+- The user leaves selects a country and types a city, selects the "Accomodation" radio button -> clicks the "Clear" button, the page resets.
+- The user leaves selects a country and types a city, selects the "Bar and Restaurants" radio button -> clicks the "Clear" button, the page resets.
+
+During testing
+- Adjustments had to be made to ensure content displayed correctly on different screen sizes
+- Map wasn't adjusting correctly when country selected
+- Radio buttons could of been selected with out selecting a city first.
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
+This project is deployed using github pages. 
+- [Website](https://michaelhdev.github.io/project-2)
 
 
 ## Credits
 
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
-
 ### Media
-- The photos used in this site were obtained from ...
+- The globe image used in this site was free to use and obtained from [Pngimage.com](http://pngimg.com/imgs/miscellaneous/globe/)
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- The examples from the google api documentation were a good source of inspiration from this project. [Google Documentation](https://developers.google.com/maps/documentation/javascript/examples/)
