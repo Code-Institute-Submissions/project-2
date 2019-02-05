@@ -99,7 +99,15 @@ function whichCategorySelecion() {
 }
 
 //Moves the map to focus on selected country and sets autocomplete restrictions.
+//Clears previous selection before setting new country
 function setCountry() {
+  
+  document.getElementById('autocomplete').value = '';
+  document.getElementById("attr").checked = false;
+  document.getElementById("accom").checked = false;
+  document.getElementById("barAndRest").checked = false;
+  clearResults();
+  
   var countryAndCoords = document.getElementById('country').value.split(',');
   var country = countryAndCoords[0];
   if (country == 'all') {
