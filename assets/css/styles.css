@@ -2,7 +2,7 @@
 
 /*---------------------------------------------Colours*/
 
-.bg-color-side {
+.bg-color-main-content {
     background-color: #f4f4f4;
 }
 
@@ -160,11 +160,7 @@ footer {
 /*Change the logo div height and text alignment on desktop*/
 
 @media(min-width:992px) {
-    .column {
-        float: none;
-        /*Allows the column to be full height*/
-        display: table-cell;
-    }
+
     .header-text {
         text-align: left;
     }
