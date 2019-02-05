@@ -243,7 +243,7 @@ function populateCountriesSelectionBox() {
         var coords = values[0] + ',' + values[1] + ',' + values[2];
         var optionTag = document.createElement('option');
         var countryName = document.createTextNode(values[3]);
-        optionTag.setAttribute('value', coords)
+        optionTag.setAttribute('value', coords);
         optionTag.appendChild(countryName);
         countriesTag.appendChild(optionTag);
       }
